@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @author    JaJuMa GmbH <info@jajuma.de>
+ * @copyright Copyright (c) 2022-present JaJuMa GmbH <https://www.jajuma.de>. All rights reserved.
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<update id="Jajuma::top_level_extensions"
+             module="Jajuma_PhosphorHyva"
+             resource="Jajuma_General::jajuma_extensions"
+             sortOrder="65"
+             title="JaJuMa"/>
+
+		<add id="Jajuma_PhosphorHyva::jajuma_phosphorhyva"
+			 title="Phosphor Hyvä"
+			 module="Jajuma_PhosphorHyva"
+			 sortOrder="3400"
+			 resource="Jajuma_PhosphorHyva::config_jajuma_phosphorhyva"
+			 parent="Jajuma::top_level_extensions"/>
+		<add id="Jajuma_PhosphorHyva::jajuma_phosphorhyva_info"
+			 title="Info + Manual"
+			 module="Jajuma_PhosphorHyva"
+			 sortOrder="3410"
+			 parent="Jajuma_PhosphorHyva::jajuma_phosphorhyva"
+			 action="admin/system_config/edit/section/phosphorhyva"
+			 resource="Jajuma_PhosphorHyva::config_jajuma_phosphorhyva"/>
+		<add id="Jajuma_PhosphorHyva::jajuma_phosphorhyva_demo"
+			 title="Demo + Icon List"
+			 module="Jajuma_PhosphorHyva"
+			 sortOrder="3420"
+			 parent="Jajuma_PhosphorHyva::jajuma_phosphorhyva"
+			 action="phosphorhyva/demo"
+			 resource="Jajuma_PhosphorHyva::config_jajuma_phosphorhyva"/>
+
+		<update id="Jajuma::extensions"
+             module="Jajuma_PhosphorHyva"
+             resource="Jajuma_General::jajuma_extensions"
+             sortOrder="10000"
+             parent="Jajuma::top_level_extensions"
+             title="JaJuMa Extensions"/>
+		<update id="Jajuma_Extensions::extensions_link"
+             title="More JaJuMa Extensions"
+			 module="Jajuma_PhosphorHyva"
+             sortOrder="10010"
+             action="phosphorhyva/extensions"
+             parent="Jajuma::extensions"
+             resource="Jajuma_General::jajuma_extensions"/>
+
+	</menu>
+</config>

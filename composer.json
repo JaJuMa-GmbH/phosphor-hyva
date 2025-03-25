@@ -1,0 +1,25 @@
+{
+  "name": "jajuma/phosphorhyva",
+  "description": "This Magento 2 extension allows using Phosphor icons with Hyvä Themes",
+  "type": "magento2-module",
+  "license": "MIT",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "email": "info@jajuma.de",
+      "name": "JaJuMa"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "hyva-themes/magento2-theme-module": ">=1.1.12"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jajuma\\PhosphorHyva\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}
